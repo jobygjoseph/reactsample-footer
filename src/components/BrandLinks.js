@@ -1,6 +1,6 @@
 const React = require('react');
 
-class FeatureLinks extends React.Component {
+class BrandLinks extends React.Component {
   render() {
     const fLinks = [
       {
@@ -28,4 +28,4 @@ class FeatureLinks extends React.Component {
 }
 
 
-module.exports = FeatureLinks;
+module.exports = BrandLinks;
