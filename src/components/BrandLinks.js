@@ -21,8 +21,7 @@ class BrandLinks extends React.Component {
       },
     ];
 
-    //const jsxLinks = fLinks.map((lk,ind) => <li key={ind}><a href={lk.href}><img src={lk.imageUrl}/></a></li>);
-    const jsxLinks = <li></li>
+    const jsxLinks = fLinks.map((lk,ind) => <li key={ind}><a href={lk.href}><img src={lk.imageUrl}/></a></li>);
     return <ul className="brand-links">{ jsxLinks }</ul>
   }
 }
