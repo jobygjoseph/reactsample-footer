@@ -20,12 +20,21 @@ app.get('*', (req, res) => {
         <link href="http://www.nbcnews.com/rassets/application.50bbd251.css" rel="stylesheet">
         <script src="./application.js"></script>
         <style>
-          footer > * {
-            margin: 30px; 
+          footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 33px;
+            border-top: 3px solid;
+            padding-top: 10px;
+          }
+          .brand-links li {
+            float: left;
+            margin-left: 20px;
           }
         </style>
       </head>
       <body>
+        <h2>Article Body</h2>
         <div id="app">${content}</div>
         <script>
           (function() {
@@ -38,6 +47,4 @@ app.get('*', (req, res) => {
   `);
 });
 
-app.listen(3000);
-
-console.log('REACT APP RUNNING');
+app.listen(3000, () => console.log('REACT APP RUNNING'));

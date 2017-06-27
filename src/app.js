@@ -8,13 +8,14 @@ const BrandLinks = require('./components/BrandLinks');
 class App extends React.Component {
   constructor() {
     super();
-    // ALL THE FOOTER DATA
+    this.state = {
+      
+    }
   }
 
   render() {
     return (
       <footer>
-        <h2>DA FOOTER</h2>
         <Logo />
         <Copyright name="nbcnews.com" />
         <Links currentUrl="/aboutus.html" />
