@@ -9,35 +9,140 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      links: [
-        {
-          href: '/aboutus.html',
-          display: 'ABOUT US'
+      currentUrl: '/',
+      currentBrand: 'nbcnews',
+      brandData: {
+        nbcnews: {
+          logo: 'http://sslnodeassets.nbcnews.com/cdnassets/projects/site-images/nbcnews-logo-white.png',
+          links: [
+            {
+              href: '/aboutus.html',
+              display: 'ABOUT US'
+            },
+            {
+              href: '/careers.html',
+              display: 'CAREERS'
+            },
+            {
+              href: '/contactus.html',
+              display: 'CONTACT'
+            },
+            {
+              href: '/privaypolicy.html',
+              display: 'PRIVACY POLICY'
+            },
+            {
+              href: '/termsofservice.html',
+              display: 'TERMS OF SERVICE'
+            },
+            {
+              href: '/sitemap.html',
+              display: 'NBCNEWS SITE MAP'
+            }
+          ],
+          name: 'NBC News',
         },
-        {
-          href: '/careers.html',
-          display: 'CAREERS'
+        msnbc: {
+          logo: 'http://www.msnbc.com/sites/msnbc/themes/leanforward/images/site-header/msnbc-logo-small.png',
+          links: [
+            {
+              href: '/aboutus.html',
+              display: 'ABOUT US'
+            },
+            {
+              href: '/careers.html',
+              display: 'CAREERS'
+            },
+            {
+              href: '/contactus.html',
+              display: 'CONTACT'
+            },
+            {
+              href: '/privaypolicy.html',
+              display: 'PRIVACY POLICY'
+            },
+            {
+              href: '/termsofservice.html',
+              display: 'TERMS OF SERVICE'
+            },
+            {
+              href: '/sitemap.html',
+              display: 'NBCNEWS SITE MAP'
+            }
+          ],
+          name: 'MSNBC',
         },
-        {
-          href: '/contactus.html',
-          display: 'CONTACT'
+        cnbc: {
+          logo: 'http://sc.cnbcfm.com/applications/cnbc.com/staticcontent/img/cnbc-hdr-logo2.png',
+          links: [
+            {
+              href: '/aboutus.html',
+              display: 'ABOUT US'
+            },
+            {
+              href: '/careers.html',
+              display: 'CAREERS'
+            },
+            {
+              href: '/contactus.html',
+              display: 'CONTACT'
+            },
+            {
+              href: '/privaypolicy.html',
+              display: 'PRIVACY POLICY'
+            },
+            {
+              href: '/termsofservice.html',
+              display: 'TERMS OF SERVICE'
+            },
+            {
+              href: '/sitemap.html',
+              display: 'NBCNEWS SITE MAP'
+            }
+          ],
+          name: 'CNBC',
         },
-        {
-          href: '/privaypolicy.html',
-          display: 'PRIVACY POLICY'
+        today: {
+          logo: 'https://nodeassets.today.com/cdnassets/today-images/show-header-logo.png',
+          links: [
+            {
+              href: '/today-aboutus.html',
+              display: 'ABOUT TODAY'
+            },
+            {
+              href: '/today-careers.html',
+              display: 'CAREERS @ Today'
+            },
+            {
+              href: '/today-contactus.html',
+              display: 'CONTACT Today'
+            },
+            {
+              href: '/today-privaypolicy.html',
+              display: 'Today: PRIVACY POLICY'
+            },
+            {
+              href: '/today-termsofservice.html',
+              display: 'Today: TERMS OF SERVICE'
+            },
+            {
+              href: '/today-sitemap.html',
+              display: 'Today SITE MAP'
+            }
+          ],
+          name: 'Today',
         },
-        {
-          href: '/termsofservice.html',
-          display: 'TERMS OF SERVICE'
-        },
-        {
-          href: '/sitemap.html',
-          display: 'NBCNEWS SITE MAP'
-        }
-      ],
-      logo: 'http://sslnodeassets.nbcnews.com/cdnassets/projects/site-images/nbcnews-logo-white.png',
-      site: 'nbcnews',
+      }
     }
+    this.updateBrand = this.updateBrand.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({currentUrl: window.location.pathname});
+  }
+
+  updateBrand(brand) {
+    this.setState({currentBrand: brand});
   }
 
   render() {
@@ -46,7 +151,7 @@ class App extends React.Component {
         <Logo />
         <Copyright name="nbcnews.com" />
         <Links currentUrl="/aboutus.html" />
-        <BrandLinks />
+        <BrandLinks updateBrand={this.updateBrand} />
       </footer>
     )
   }
