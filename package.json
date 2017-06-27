@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "browserify src/app.js -t babelify --outfile lib/app.js",
-    "start": "npm run build && npm run server",
-    "server": "babel-node server.js",
+    "prestart": "node_modules/.bin/webpack",
+    "start": "node_modules/.bin/webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,6 +21,11 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-plugin-transform-react-jsx": "^6.24.1"
+    "babel-loader": "^6.2.7",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }

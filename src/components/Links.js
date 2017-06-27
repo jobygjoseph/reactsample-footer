@@ -8,7 +8,8 @@ class Links extends React.Component {
   constructor() {
     super();
     this.state = {
-      links: [{
+      links: [
+        {
           href: '/aboutus.html',
           display: 'ABOUT US'
         },
@@ -31,7 +32,8 @@ class Links extends React.Component {
         {
           href: '/sitemap.html',
           display: 'NBCNEWS SITE MAP'
-        }]
+        }
+      ]
     }
   }
 
@@ -44,4 +46,4 @@ class Links extends React.Component {
   }
 }
 
-module.exports = Links
+module.exports = Links;

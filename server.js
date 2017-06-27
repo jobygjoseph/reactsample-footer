@@ -27,6 +27,7 @@ app.get('*', (req, res) => {
             border-top: 3px solid;
             padding-top: 10px;
           }
+
           .brand-links li {
             float: left;
             margin-left: 20px;
