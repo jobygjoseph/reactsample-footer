@@ -1,6 +1,10 @@
 const React = require('react');
 
 class Links extends React.Component {
+  componentDidMount() {
+    console.log('MOUNTED!');
+  }
+
   constructor() {
     super();
     this.state = {

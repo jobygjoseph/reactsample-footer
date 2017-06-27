@@ -5,19 +5,19 @@ class BrandLinks extends React.Component {
     const fLinks = [
       {
         href: 'http://cnbc.com/',
-        imageUrl: '',
+        imageUrl: 'https://media.sailthru.com/5cj/1k1/6/7/59381576227a9.jpg',
       },
       {
         href: 'http://msnbc.com',
-        imageUrl: '',
+        imageUrl: 'https://media.sailthru.com/5cj/1k1/6/7/59381591c7249.jpg',
       },
       {
         href: 'http://www.today.com',
-        imageUrl: '',
+        imageUrl: 'https://media.sailthru.com/5cj/1k1/6/7/593815a78a443.jpg',
       },
       {
         href: 'http://xfinity.com',
-        imageUrl: '',
+        imageUrl: 'https://media.sailthru.com/5cj/1k1/6/7/593815d52f916.jpg',
       },
     ];
 

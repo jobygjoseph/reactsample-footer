@@ -17,7 +17,13 @@ app.get('*', (req, res) => {
   res.send(`
     <html>
       <head>
+        <link href="http://www.nbcnews.com/rassets/application.50bbd251.css" rel="stylesheet">
         <script src="./application.js"></script>
+        <style>
+          footer > * {
+            margin: 30px; 
+          }
+        </style>
       </head>
       <body>
         <div id="app">${content}</div>
