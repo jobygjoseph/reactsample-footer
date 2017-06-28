@@ -40,97 +40,97 @@ class App extends React.Component {
               display: 'NBCNEWS SITE MAP'
             }
           ],
-          name: 'NBC News',
+          displayName: 'NBC News',
         },
         msnbc: {
           logo: 'http://www.msnbc.com/sites/msnbc/themes/leanforward/images/site-header/msnbc-logo-small.png',
           links: [
             {
-              href: '/aboutus.html',
-              display: 'ABOUT US'
+              href: '/msnbc-aboutus.html',
+              display: 'MSNBC ABOUT US'
             },
             {
-              href: '/careers.html',
-              display: 'CAREERS'
+              href: '/msnbc-careers.html',
+              display: 'MSNBC CAREERS'
             },
             {
-              href: '/contactus.html',
-              display: 'CONTACT'
+              href: '/msnbc-contactus.html',
+              display: 'MSNBC CONTACT'
             },
             {
-              href: '/privaypolicy.html',
-              display: 'PRIVACY POLICY'
+              href: '/msnbc-privaypolicy.html',
+              display: 'MSNBC PRIVACY POLICY'
             },
             {
-              href: '/termsofservice.html',
-              display: 'TERMS OF SERVICE'
+              href: '/msnbc-termsofservice.html',
+              display: 'MSNBC TERMS OF SERVICE'
             },
             {
-              href: '/sitemap.html',
-              display: 'NBCNEWS SITE MAP'
+              href: '/msnbc-sitemap.html',
+              display: 'MSNBC NBCNEWS SITE MAP'
             }
           ],
-          name: 'MSNBC',
+          displayName: 'MSNBC',
         },
         cnbc: {
           logo: 'http://sc.cnbcfm.com/applications/cnbc.com/staticcontent/img/cnbc-hdr-logo2.png',
           links: [
             {
-              href: '/aboutus.html',
-              display: 'ABOUT US'
+              href: '/cnbc-aboutus.html',
+              display: 'CNBC ABOUT US'
             },
             {
-              href: '/careers.html',
-              display: 'CAREERS'
+              href: '/cnbc-careers.html',
+              display: 'CNBC CAREERS'
             },
             {
-              href: '/contactus.html',
-              display: 'CONTACT'
+              href: '/cnbc-contactus.html',
+              display: 'CNBC CONTACT'
             },
             {
-              href: '/privaypolicy.html',
-              display: 'PRIVACY POLICY'
+              href: '/cnbc-privaypolicy.html',
+              display: 'CNBC PRIVACY POLICY'
             },
             {
-              href: '/termsofservice.html',
-              display: 'TERMS OF SERVICE'
+              href: '/cnbc-termsofservice.html',
+              display: 'CNBC TERMS OF SERVICE'
             },
             {
-              href: '/sitemap.html',
-              display: 'NBCNEWS SITE MAP'
+              href: '/cnbc-sitemap.html',
+              display: 'CNBC  SITE MAP'
             }
           ],
-          name: 'CNBC',
+          displayName: 'CNBC',
         },
         today: {
           logo: 'https://nodeassets.today.com/cdnassets/today-images/show-header-logo.png',
           links: [
             {
               href: '/today-aboutus.html',
-              display: 'ABOUT TODAY'
+              display: 'TODAY ABOUT US'
             },
             {
               href: '/today-careers.html',
-              display: 'CAREERS @ Today'
+              display: 'TODAY CAREERS'
             },
             {
               href: '/today-contactus.html',
-              display: 'CONTACT Today'
+              display: 'TODAY CONTACT US'
             },
             {
               href: '/today-privaypolicy.html',
-              display: 'Today: PRIVACY POLICY'
+              display: 'TODAY PRIVACY POLICY'
             },
             {
               href: '/today-termsofservice.html',
-              display: 'Today: TERMS OF SERVICE'
+              display: 'TODAY TERMS OF SERVICE'
             },
             {
               href: '/today-sitemap.html',
-              display: 'Today SITE MAP'
+              display: 'TODAY SITE MAP'
             }
           ],
-          name: 'Today',
+          displayName: 'TODAY',
         },
       }
     }
@@ -149,7 +149,7 @@ class App extends React.Component {
     return (
       <footer>
         <Logo brandImage={this.state.brandData[this.state.currentBrand].logo} />
-        <Copyright currentBrand={this.state.currentBrand} />
+        <Copyright currentBrand={this.state.brandData[this.state.currentBrand].displayName} />
         <Links brandLinks={this.state.brandData[this.state.currentBrand].links} />
         <BrandLinks updateBrand={this.updateBrand} />
       </footer>

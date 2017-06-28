@@ -30,7 +30,7 @@ class BrandLinks extends React.Component {
         imageUrl: 'https://media.sailthru.com/5cj/1k1/6/7/593815a78a443.jpg',
       },
       {
-        xfinity: 'xfinity',
+        brand: 'nbcnews',
         href: 'http://xfinity.com',
         imageUrl: 'https://media.sailthru.com/5cj/1k1/6/7/593815d52f916.jpg',
       },
