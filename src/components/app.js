@@ -148,9 +148,9 @@ class App extends React.Component {
   render() {
     return (
       <footer>
-        <Logo />
-        <Copyright name="nbcnews.com" />
-        <Links currentUrl="/aboutus.html" />
+        <Logo brandImage={this.state.brandData[this.state.currentBrand].logo} />
+        <Copyright currentBrand={this.state.currentBrand} />
+        <Links brandLinks={this.state.brandData[this.state.currentBrand].links} />
         <BrandLinks updateBrand={this.updateBrand} />
       </footer>
     )

@@ -1,8 +1,13 @@
 const React = require('react');
 
 class Logo extends React.Component {
+  constructor() {
+    super();
+    this.getSiteLogo = this.getSiteLogo.bind(this);
+  }
+  
   getSiteLogo() {
-    return <img src="http://sslnodeassets.nbcnews.com/cdnassets/projects/site-images/nbcnews-logo-white.png" alt="NBC NEWS"/>
+    return <img src={this.props.brandImage} alt="NBC NEWS"/>
   }
 
   render() {
