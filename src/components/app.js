@@ -1,9 +1,9 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Copyright = require('./Copyright');
-const Logo = require('./Logo');
-const Links = require('./Links');
-const BrandLinks = require('./BrandLinks');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Copyright from './Copyright';
+import Logo from './Logo';
+import Links from './Links';
+import BrandLinks from './BrandLinks';
 
 class App extends React.Component {
   constructor() {
