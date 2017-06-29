@@ -26,7 +26,7 @@ class App extends React.Component {
       <footer>
         <Logo brandImage={this.state.brandData[this.state.currentBrand].logo} />
         <Copyright currentBrand={this.state.brandData[this.state.currentBrand].displayName} />
-        <Links brandLinks={this.state.brandData[this.state.currentBrand].links} />
+        <Links links={this.state.brandData[this.state.currentBrand].links} />
         <BrandLinks updateBrand={this.updateBrand} />
       </footer>
     )
