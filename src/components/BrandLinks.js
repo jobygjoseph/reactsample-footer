@@ -1,6 +1,6 @@
 const React = require('react');
 
-class BrandLinks extends React.Component {
+export default class BrandLinks extends React.Component {
   constructor() {
     super();
     this.clickHandler = this.clickHandler.bind(this);
@@ -47,6 +47,3 @@ class BrandLinks extends React.Component {
     return <ul className="brand-links">{ jsxLinks }</ul>
   }
 }
-
-
-module.exports = BrandLinks;

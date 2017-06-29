@@ -1,6 +1,6 @@
 const React = require('react');
 
-class Links extends React.Component {
+export default class Links extends React.Component {
   componentDidMount() {
     console.log('MOUNTED!');
   }
@@ -12,5 +12,3 @@ class Links extends React.Component {
     return <ul>{ allLinks }</ul>
   }
 }
-
-module.exports = Links;

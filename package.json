@@ -17,7 +17,8 @@
     "browserify": "^14.4.0",
     "express": "^4.15.3",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "redux": "^3.7.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
