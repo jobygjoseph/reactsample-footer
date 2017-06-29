@@ -6,8 +6,8 @@ export default class Links extends React.Component {
   }
 
   render() {
-    const { brandLinks } = this.props;
-    const allLinks = brandLinks
+    const { links } = this.props;
+    const allLinks = links
       .map((lk, ind) => <li key={ind}><a href={lk.href}>{lk.display}</a></li>);
     return <ul>{ allLinks }</ul>
   }
